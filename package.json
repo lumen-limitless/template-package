@@ -1,0 +1,40 @@
+{
+  "name": "template-package",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "lumen-limitless",
+  "main": "dist/index.js",
+  "module": "dist/template-package.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "dts build",
+    "lint": "dts lint",
+    "prepare": "dts build",
+    "start": "dts watch",
+    "test": "dts test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "dts lint"
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.2",
+    "@typechain/ethers-v5": "^10.2.0",
+    "dts-cli": "^2.0.2",
+    "husky": "^8.0.3",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {}
+}
